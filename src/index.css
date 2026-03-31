@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-easy-green: #22C55E;
+  --color-easy-dark: #0A0A0A;
+  --color-easy-gray: #141414;
+  --color-easy-light: #F8FAFC;
+}
+
+@layer base {
+  body {
+    @apply bg-easy-dark text-white antialiased;
+    background-image: 
+      linear-gradient(rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0.92)),
+      url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+  }
+}
+
+.matrix-bg {
+  background-image: 
+    linear-gradient(to bottom, rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.98)),
+    url("https://ais-pre-uwhwyivzex77gwonguyml2-121108784645.us-west1.run.app/attachment/67035677-494b-4860-9195-2633005a7674");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.pdf-item-box {
+  @apply flex items-center gap-4 py-4 border-b border-white/5 last:border-0;
+}
+
+.pdf-icon-container {
+  @apply w-12 h-12 rounded-xl border border-easy-green/30 flex items-center justify-center bg-easy-green/5 shadow-[0_0_15px_rgba(34,197,94,0.1)];
+}
+
+.pdf-item-label {
+  @apply text-easy-green font-black uppercase tracking-tighter text-sm leading-none mb-1.5;
+}
+
+.pdf-item-value {
+  @apply text-white font-bold text-base leading-tight;
+}
+
+.pdf-price-pill {
+  @apply bg-easy-green text-easy-dark px-6 py-2.5 rounded-full font-black text-sm shadow-[0_0_20px_rgba(34,197,94,0.3)] whitespace-nowrap;
+}
